@@ -1,0 +1,123 @@
+/* Estilos para impresión */
+@media print {
+    /* Ocultar elementos que no deben imprimirse */
+    .navigation, .scroll-indicator, .particles, .terminal-text, .loading-bar, footer-btn, .grid-body-bg {
+        display: none !important;
+    }
+    
+    /* Ajustar colores para impresión */
+    body {
+        background: white !important;
+        color: black !important;
+        font-family: 'Exo 2', Arial, sans-serif !important;
+    }
+    
+    /* Eliminar efectos visuales que no se ven bien en impresión */
+    body::after {
+        display: none !important;
+    }
+    
+    /* Ajustar títulos para impresión */
+    h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+        text-shadow: none !important;
+        page-break-after: avoid !important;
+    }
+    
+    h1 {
+        font-size: 28pt !important;
+        text-align: center !important;
+        margin: 20pt 0 !important;
+        color: #000 !important;
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+    }
+    
+    h1::before, h1::after {
+        display: none !important;
+    }
+    
+    h2 {
+        font-size: 22pt !important;
+        border-bottom: 1pt solid #000 !important;
+        margin-top: 20pt !important;
+    }
+    
+    h2::after {
+        display: none !important;
+    }
+    
+    h3 {
+        font-size: 18pt !important;
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+    
+    /* Ajustar contenido para impresión */
+    p, li {
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+        color: #000 !important;
+    }
+    
+    strong, b {
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+    
+    /* Asegurar que las secciones comiencen en una nueva página cuando sea necesario */
+    section {
+        page-break-inside: avoid !important;
+    }
+    
+    /* Ajustar contenedores y elementos UI para impresión */
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .section {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin-bottom: 20pt !important;
+    }
+    
+    .hologram, .data-stream, .ui-element, .distortion-effect {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Ajustar elementos específicos */
+    .card-interface-element, .glow-border, .glow-effect {
+        border: 1pt solid #000 !important;
+        box-shadow: none !important;
+    }
+    
+    .number-indicator, .icon-indicator {
+        background: #eee !important;
+        color: #000 !important;
+        border: 1pt solid #000 !important;
+    }
+    
+    /* Añadir información de pie de página */
+    @page {
+        margin: 2cm;
+        @bottom-center {
+            content: "Strategic Heroes - Manual del Juego";
+        }
+        @bottom-right {
+            content: "Página " counter(page);
+        }
+    }
+    
+    /* Asegurar que las imágenes se impriman correctamente */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid !important;
+    }
+}

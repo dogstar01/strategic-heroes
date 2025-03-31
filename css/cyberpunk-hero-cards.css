@@ -1,0 +1,604 @@
+/* Estilos para las cartas de héroe con estética cyberpunk */
+
+/* Variables específicas para cartas de héroe */
+:root {
+  /* Colores de cartas */
+  --hero-blue: #0a3b5c;
+  --hero-blue-glow: #00ccff;
+  --hero-green: #0a4c2a;
+  --hero-green-glow: #00ff66;
+  --hero-purple: #3a1a5c;
+  --hero-purple-glow: #9966ff;
+  --hero-red: #5c1a0a;
+  --hero-red-glow: #ff6644;
+  --hero-dark: #0a0a14;
+  
+  /* Efectos de neón */
+  --neon-blue: 0 0 10px rgba(0, 204, 255, 0.7), 0 0 20px rgba(0, 204, 255, 0.4);
+  --neon-green: 0 0 10px rgba(0, 255, 102, 0.7), 0 0 20px rgba(0, 255, 102, 0.4);
+  --neon-purple: 0 0 10px rgba(153, 102, 255, 0.7), 0 0 20px rgba(153, 102, 255, 0.4);
+  --neon-red: 0 0 10px rgba(255, 102, 68, 0.7), 0 0 20px rgba(255, 102, 68, 0.4);
+  
+  /* Bordes brillantes */
+  --border-glow-blue: 0 0 5px rgba(0, 204, 255, 0.7);
+  --border-glow-green: 0 0 5px rgba(0, 255, 102, 0.7);
+  --border-glow-purple: 0 0 5px rgba(153, 102, 255, 0.7);
+  --border-glow-red: 0 0 5px rgba(255, 102, 68, 0.7);
+}
+
+/* Cartas de personaje con estilo cyberpunk */
+.hero-card {
+  width: 300px;
+  height: 450px;
+  margin: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(10, 20, 40, 0.9), rgba(5, 10, 20, 0.95));
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 162, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(0, 162, 255, 0.05) 50%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, rgba(0, 255, 204, 0.03) 50%, transparent 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+  box-shadow: var(--neon-primary);
+  z-index: 2;
+}
+
+.hero-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 162, 255, 0.5);
+}
+
+.hero-card-header {
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: var(--text-highlight);
+  margin-bottom: 0.2rem;
+  text-shadow: 0 0 5px rgba(0, 162, 255, 0.7);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-card-subtitle {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+}
+
+.hero-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-card-body p {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+}
+
+.hero-card-ability {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 162, 255, 0.3);
+  position: relative;
+}
+
+.hero-card-ability::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+  opacity: 0.7;
+}
+
+/* Contenedor de cartas de héroe */
+#hero-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+/* Estilos específicos para la carta del Oráculo Supremo - Modificado para consistencia */
+.hero-card:first-of-type {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+/* Eliminamos el fondo con transparencia diferente para mantener consistencia visual */
+
+.hero-card:first-of-type .hero-card-header,
+.hero-card:first-of-type .hero-card-body {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-card:first-of-type .hero-card-header {
+  padding-top: 10px;
+}
+
+.hero-card:first-of-type .hero-card-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 162, 255, 0.7);
+}
+
+.hero-card:first-of-type .hero-card-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 255, 204, 0.7);
+}
+
+/* Número de carta y código en la esquina inferior */
+.hero-card:first-of-type::after {
+  content: "12 SH-H01";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+  text-shadow: 0 0 5px rgba(0, 162, 255, 0.7);
+}
+
+/* Efecto de escaneo para cartas */
+.hero-card .scan-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 162, 255, 0.1),
+    transparent
+  );
+  opacity: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero-card:hover .scan-effect {
+  animation: card-scan 2s ease-in-out infinite;
+}
+
+@keyframes card-scan {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+/* Efecto de borde brillante para cartas */
+.hero-card {
+  position: relative;
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 162, 255, 0.3);
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+.hero-card:hover::before {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(0, 162, 255, 0.5);
+}
+
+/* Efectos de datos digitales para cartas */
+.hero-card::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--primary-color);
+  opacity: 0.7;
+  z-index: 3;
+}
+
+.hero-card:nth-of-type(1)::after {
+  content: "CMD-01";
+}
+
+.hero-card:nth-of-type(2)::after {
+  content: "STR-02";
+}
+
+.hero-card:nth-of-type(3)::after {
+  content: "OPS-03";
+}
+
+.hero-card:nth-of-type(4)::after {
+  content: "INF-04";
+}
+
+.hero-card:nth-of-type(5)::after {
+  content: "TEC-05";
+}
+
+.hero-card:nth-of-type(6)::after {
+  content: "REC-06";
+}
+
+.hero-card:nth-of-type(7)::after {
+  content: "RES-07";
+}
+
+.hero-card:nth-of-type(8)::after {
+  content: "INT-08";
+}
+
+/* Efectos de hover para cartas */
+.hero-card:hover .hero-card-title {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
+}
+
+.hero-card:hover .hero-card-subtitle {
+  color: var(--text-highlight);
+  text-shadow: 0 0 10px rgba(0, 162, 255, 0.7);
+}
+
+/* Animación de pulso para cartas */
+@keyframes card-pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 162, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 162, 255, 0.5), 0 0 30px rgba(0, 162, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 162, 255, 0.3);
+  }
+}
+
+.hero-card:hover {
+  animation: card-pulse 2s infinite;
+}
+
+/* Estilos para diferentes tipos de cartas */
+.strategy-card {
+  background: linear-gradient(135deg, rgba(10, 40, 20, 0.9), rgba(5, 15, 10, 0.95));
+  border: 1px solid var(--accent-color);
+}
+
+.strategy-card:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.5);
+}
+
+.obstacle-card {
+  background: linear-gradient(135deg, rgba(30, 10, 40, 0.9), rgba(15, 5, 20, 0.95));
+  border: 1px solid var(--accent-secondary);
+}
+
+.obstacle-card:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 204, 0.5);
+}
+
+.enemy-card {
+  background: linear-gradient(135deg, rgba(40, 10, 10, 0.9), rgba(20, 5, 5, 0.95));
+  border: 1px solid var(--danger-color);
+}
+
+.enemy-card:hover {
+  box-shadow: 0 0 25px rgba(255, 51, 102, 0.5);
+}
+
+/* Efectos de hologramas para cartas */
+.hologram-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      transparent 0%,
+      rgba(0, 162, 255, 0.03) 0.5%,
+      transparent 1%
+    );
+  animation: hologram-lines 10s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes hologram-lines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* Efectos de distorsión para cartas */
+.hero-card:hover {
+  animation: card-glitch 0.3s ease-in-out;
+}
+
+@keyframes card-glitch {
+  0% {
+    transform: translateY(-10px) skewX(0deg);
+  }
+  20% {
+    transform: translateY(-10px) skewX(1deg);
+  }
+  40% {
+    transform: translateY(-10px) skewX(-1deg);
+  }
+  60% {
+    transform: translateY(-10px) skewX(0.5deg);
+  }
+  80% {
+    transform: translateY(-10px) skewX(-0.5deg);
+  }
+  100% {
+    transform: translateY(-10px) skewX(0deg);
+  }
+}
+
+/* Responsive design para cartas */
+@media (max-width: 768px) {
+  .hero-card {
+    width: 250px;
+    height: 375px;
+    padding: 15px;
+  }
+  
+  .hero-card-title {
+    font-size: 1.3rem;
+  }
+  
+  .hero-card-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-card-body p {
+    font-size: 0.85rem;
+  }
+  
+  .hero-card:first-of-type .hero-card-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-card:first-of-type .hero-card-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Efectos de carga para cartas */
+.hero-card.loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 162, 255, 0.2),
+    transparent
+  );
+  animation: card-loading 1.5s infinite;
+  z-index: 6;
+}
+
+@keyframes card-loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* Efectos de energía para cartas */
+.energy-indicator {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  margin-right: 5px;
+  box-shadow: 0 0 10px rgba(0, 162, 255, 0.7);
+}
+
+.energy-indicator.active {
+  background: var(--accent-color);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
+}
+
+/* Efectos de interfaz de usuario futurista para cartas */
+.card-interface-element {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: var(--primary-color);
+  box-shadow: var(--neon-primary);
+}
+
+.card-interface-element.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.card-interface-element.top-right {
+  top: 10px;
+  right: 10px;
+  transform: rotate(90deg);
+}
+
+.card-interface-element.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  transform: rotate(-90deg);
+}
+
+.card-interface-element.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+/* Efectos de datos para cartas */
+.data-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(
+      rgba(0, 10, 20, 0.8),
+      rgba(0, 10, 20, 0.8)
+    ),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="20" font-family="monospace" font-size="10" fill="%2300a2ff">01001</text><text x="30" y="40" font-family="monospace" font-size="10" fill="%2300a2ff">10110</text><text x="50" y="60" font-family="monospace" font-size="10" fill="%2300a2ff">01010</text><text x="20" y="80" font-family="monospace" font-size="10" fill="%2300a2ff">11001</text></svg>');
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 7;
+  pointer-events: none;
+}
+
+.hero-card:hover .data-overlay {
+  opacity: 0.1;
+}
+
+/* Efectos de selección para cartas */
+.hero-card.selected {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 162, 255, 0.7);
+  z-index: 10;
+}
+
+.hero-card.selected::before {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+}
+
+/* Efectos de desplazamiento para cartas */
+.card-scroll-container {
+  overflow-x: auto;
+  padding: 20px 0;
+  margin: 0 -20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--background-darker);
+}
+
+.card-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-scroll-container::-webkit-scrollbar-track {
+  background: var(--background-darker);
+}
+
+.card-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.card-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+/* Efectos de transición para cartas */
+.card-transition {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-transition:hover {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efectos de cursor personalizado para cartas */
+.hero-card {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300a2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>') 12 12, auto;
+}
+
+/* Efectos de selección de texto para cartas */
+.hero-card ::selection {
+  background: rgba(0, 162, 255, 0.3);
+  color: var(--text-highlight);
+  text-shadow: 0 0 5px rgba(0, 162, 255, 0.5);
+}
+
+.hero-card ::-moz-selection {
+  background: rgba(0, 162, 255, 0.3);
+  color: var(--text-highlight);
+  text-shadow: 0 0 5px rgba(0, 162, 255, 0.5);
+}

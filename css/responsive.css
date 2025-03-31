@@ -1,0 +1,188 @@
+/* Estilos responsivos para Strategic Heroes */
+
+/* Estilos para dispositivos móviles pequeños (hasta 480px) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    p, li {
+        font-size: 0.9rem !important;
+    }
+    
+    .container {
+        padding: 0 10px !important;
+    }
+    
+    .section {
+        padding: 15px !important;
+    }
+    
+    .navigation {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    
+    .button {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    /* Ajustes específicos para el tablero */
+    .board-container {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    .board-cell {
+        padding: 5px !important;
+    }
+    
+    /* Ajustes para los dados */
+    .dice-container {
+        flex-direction: column !important;
+    }
+    
+    .dice-card {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+    
+    /* Ajustes para los componentes */
+    .component-card {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .component-list li {
+        margin-bottom: 10px !important;
+    }
+}
+
+/* Estilos para tablets y dispositivos móviles medianos (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .container {
+        padding: 0 15px !important;
+    }
+    
+    .navigation {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+    
+    .button {
+        min-width: 150px !important;
+    }
+    
+    /* Ajustes específicos para el tablero */
+    .board-container {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+    
+    /* Ajustes para los dados */
+    .dice-container {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .dice-card {
+        width: 80% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Ajustes para los componentes */
+    .component-card {
+        width: 45% !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+/* Estilos para tablets grandes y pantallas pequeñas (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 20px !important;
+    }
+    
+    /* Ajustes específicos para el tablero */
+    .board-container {
+        grid-template-columns: repeat(5, 1fr) !important;
+    }
+    
+    /* Ajustes para los dados */
+    .dice-card {
+        width: 45% !important;
+    }
+    
+    /* Ajustes para los componentes */
+    .component-card {
+        width: 30% !important;
+    }
+}
+
+/* Mejoras generales de accesibilidad y usabilidad */
+@media (hover: hover) {
+    .button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4) !important;
+    }
+    
+    .board-cell:hover, .dice-card:hover, .component-card:hover {
+        transform: scale(1.03) !important;
+        transition: transform 0.3s ease !important;
+    }
+}
+
+/* Ajustes para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000 !important;
+    }
+}
+
+/* Ajustes para preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .scan-line::before, .scan-line::after,
+    .glitch-effect, .data-glitch::before, .data-glitch::after,
+    .scan-effect, .particle {
+        display: none !important;
+    }
+}
+
+/* Mejoras de contraste para accesibilidad */
+@media (prefers-contrast: more) {
+    body {
+        color: #fff !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6, p, li, a {
+        color: #fff !important;
+        text-shadow: 0 0 2px #000 !important;
+    }
+    
+    .button, .board-cell, .dice-card, .component-card {
+        border: 2px solid #fff !important;
+    }
+}
