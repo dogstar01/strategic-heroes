@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Heroes - Manual del Juego</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=Exo+2:wght@200;300;400;500;600;700&family=Syncopate:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cyberpunk-styles.css">
+    <link rel="stylesheet" href="css/cyberpunk-hero-cards.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/cyberpunk-components.css">
+    <link rel="stylesheet" href="css/component-cards.css">
+    <link rel="stylesheet" href="css/print-styles.css" media="print">
+</head>
+<body class="custom-cursor">
+    <div class="grid-body-bg"></div>
+    <div class="particles" id="particles"></div>
+    
+    <header class="scan-line">
+        <div class="circuit-header-bg"></div>
+        <div class="container">
+            <h1 data-text="STRATEGIC HEROES">STRATEGIC HEROES</h1>
+            <p>Un juego cooperativo de estrategia, liderazgo y trabajo en equipo</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section hologram data-stream">
+            <h2 class="data-glitch" data-text="BIENVENIDOS A STRATEGIC HEROES">BIENVENIDOS A STRATEGIC HEROES</h2>
+            
+            <p>En un futuro cercano, las grandes corporaciones han logrado lo impensable: controlar los recursos clave del planeta y manipular la información a escala global. La sociedad está al borde del colapso, sumida en una realidad distorsionada por algoritmos y propaganda.</p>
+            
+            <p>Pero aún queda esperanza.</p>
+            
+            <p>Desde las sombras emerge <strong>La Boca te Lía</strong>, una organización rebelde que lucha por devolver la libertad y la verdad al mundo. Sus miembros, conocidos como los BlueJacket, son héroes decididos a enfrentarse al sistema. Guiados por los visionarios estrategas del grupo, los <strong>BlueHorizon</strong>, estos líderes operativos están listos para infiltrarse en los servidores centrales de las megacorporaciones y exponer sus secretos.</p>
+            
+            <p>Strategic Heroes es un juego de mesa cooperativo en el que tú y tu equipo asumís el papel de estos valientes líderes. Enfrentaos a enemigos implacables, superad obstáculos impredecibles, gestionad desastres críticos y desplegad estrategias audaces para completar vuestra misión antes de que sea demasiado tarde.</p>
+            
+            <p>Más que un juego, Strategic Heroes es una experiencia de liderazgo compartido. Cada partida pone a prueba vuestra capacidad para comunicar, coordinar y tomar decisiones conjuntas bajo presión. Ideal para entornos profesionales, educativos o simplemente para quienes disfrutan de los grandes desafíos en equipo.</p>
+        </section>
+
+        <section class="section ui-element">
+            <h2 class="glow-effect">COMPONENTES DEL JUEGO</h2>
+            
+            <div class="card-interface-element top-left"></div>
+            <div class="card-interface-element top-right"></div>
+            
+            <p>Strategic Heroes incluye los siguientes componentes, todos disponibles para imprimir directamente desde este sitio web:</p>
+            
+            <ul class="component-list">
+                <li><span class="number-indicator">1</span> <strong>1 tablero de juego</strong> con 30 casillas</li>
+                <li><span class="number-indicator">2</span> <strong>8 cartas de BlueHorizon</strong> (personajes jugables)</li>
+                <li><span class="number-indicator">3</span> <strong>20 cartas de Estrategia</strong></li>
+                <li><span class="number-indicator">4</span> <strong>12 cartas de Obstáculo</strong></li>
+                <li><span class="number-indicator">5</span> <strong>12 cartas de Enemigo</strong></li>
+                <li><span class="number-indicator">6</span> <strong>10 cartas de Desastre</strong></li>
+                <li><span class="number-indicator">7</span> <strong>10 cartas de Evento</strong></li>
+                <li><span class="number-indicator">8</span> <strong>10 cartas de Reflexión</strong></li>
+                <li><span class="number-indicator">9</span> <strong>8 fichas de héroe</strong></li>
+                <li><span class="number-indicator">10</span> <strong>16 marcadores de energía</strong></li>
+                <li><span class="number-indicator">11</span> <strong>Plantillas para dados D6 y D20</strong></li>
+            </ul>
+            
+            <p>Puedes acceder a cada componente a través de los enlaces en la navegación, donde encontrarás opciones para imprimir cada elemento individualmente.</p>
+            
+            <div class="card-interface-element bottom-left"></div>
+            <div class="card-interface-element bottom-right"></div>
+        </section>
+
+        <section class="section distortion-effect">
+            <h2>REGLAS BÁSICAS</h2>
+            
+            <div class="rules-container">
+                <div class="rule-block glow-border">
+                    <h3>Preparación</h3>
+                    <p>Para comenzar una partida de Strategic Heroes, seguid estos pasos:</p>
+                    <ol>
+                        <li>Colocad el tablero en el centro de la mesa.</li>
+                        <li>Cada jugador elige una carta de BlueHorizon y toma la ficha correspondiente.</li>
+                        <li>Colocad todas las fichas de héroe en la casilla de INICIO.</li>
+                        <li>Cada jugador recibe los puntos de energía iniciales indicados en su carta de BlueHorizon.</li>
+                        <li>Barajad por separado los mazos de Estrategia, Obstáculo, Enemigo, Desastre, Evento y Reflexión.</li>
+                        <li>Cada jugador recibe 2 cartas de Estrategia.</li>
+                        <li>El jugador con más experiencia en juegos de estrategia comienza la partida.</li>
+                    </ol>
+                </div>
+                
+                <div class="rule-block glow-border">
+                    <h3>Objetivo</h3>
+                    <p>El objetivo principal es que todos los BlueHorizon lleguen a la casilla META (Servidor Central) con al menos 1 punto de energía. Si cualquier BlueHorizon pierde todos sus puntos de energía, la misión fracasa y todos los jugadores pierden.</p>
+                </div>
+                
+                <div class="rule-block glow-border">
+                    <h3>Turno de Juego</h3>
+                    <p>En su turno, cada jugador realiza las siguientes acciones en orden:</p>
+                    <ol>
+                        <li>Lanzar el dado: El jugador lanza el dado D6 para determinar cuántas casillas avanza su BlueHorizon.</li>
+                        <li>Mover la ficha: Avanza tu ficha el número de casillas indicado por el dado.</li>
+                        <li>Resolver la casilla: Dependiendo del tipo de casilla en la que caigas, deberás resolver un efecto específico.</li>
+                        <li>Usar cartas o habilidades: Puedes usar una carta de Estrategia y/o la habilidad especial de tu BlueHorizon.</li>
+                        <li>Finalizar turno: El turno pasa al siguiente jugador en sentido horario.</li>
+                    </ol>
+                </div>
+                
+                <div class="rule-block glow-border">
+                    <h3>Tipos de Casillas</h3>
+                    <ul>
+                        <li><strong>Normal:</strong> Sin efectos especiales.</li>
+                        <li><strong>Obstáculo (🚧):</strong> Roba una carta de Obstáculo y supera el desafío lanzando el dado D20. Si el resultado es igual o superior a la dificultad indicada, superas el obstáculo. Si fallas, pierdes 1 punto de energía.</li>
+                        <li><strong>Enemigo (👤):</strong> Roba una carta de Enemigo y enfréntate a él lanzando el dado D20. Si el resultado es igual o superior a la dificultad indicada, derrotas al enemigo. Si fallas, pierdes 2 puntos de energía.</li>
+                        <li><strong>Desastre (💥):</strong> Roba una carta de Desastre. Todos los jugadores deben superar la dificultad indicada o sufrir las consecuencias descritas en la carta.</li>
+                        <li><strong>Evento (⚡):</strong> Roba una carta de Evento y aplica su efecto, que puede ser positivo o negativo para todo el equipo.</li>
+                        <li><strong>Mejora (⬆️):</strong> Recuperas 2 puntos de energía o robas una carta de Estrategia adicional.</li>
+                        <li><strong>Reflexión (💭):</strong> Roba una carta de Reflexión y discute con tu equipo la pregunta planteada. Después de la reflexión, cada jugador recupera 1 punto de energía.</li>
+                    </ul>
+                </div>
+                
+                <div class="rule-block glow-border">
+                    <h3>Reglas adicionales</h3>
+                    <ul>
+                        <li><strong>Cooperación:</strong> Strategic Heroes es un juego cooperativo, lo que significa que todos los jugadores ganan o pierden juntos. Es fundamental la comunicación y la planificación estratégica entre los miembros del equipo.</li>
+                        <li><strong>Transferencia de energía:</strong> Si tu ficha está en la misma casilla que la de otro jugador, puedes transferirle hasta 2 puntos de energía en tu turno.</li>
+                        <li><strong>Casillas ocupadas:</strong> Puede haber múltiples fichas en la misma casilla sin ningún efecto negativo.</li>
+                        <li><strong>Límite de energía:</strong> Un BlueHorizon no puede tener más de 12 puntos de energía en ningún momento.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section ui-element">
+            <h2 class="glow-effect">VARIANTES DE JUEGO</h2>
+            
+            <div class="card-interface-element top-left"></div>
+            <div class="card-interface-element top-right"></div>
+            
+            <div class="variants-container">
+                <div class="variant-block">
+                    <h3>Modo Desafío</h3>
+                    <p>Para jugadores experimentados que buscan un reto mayor:</p>
+                    <ul>
+                        <li>Todos los BlueHorizon comienzan con 2 puntos menos de energía.</li>
+                        <li>La dificultad de todos los desafíos aumenta en 2 puntos.</li>
+                        <li>Solo se pueden usar 3 cartas de Estrategia por jugador durante toda la partida.</li>
+                    </ul>
+                </div>
+                
+                <div class="variant-block">
+                    <h3>Modo Rápido</h3>
+                    <p>Para partidas más cortas (30-45 minutos):</p>
+                    <ul>
+                        <li>Reducid el tablero a 20 casillas.</li>
+                        <li>Cada jugador comienza con 1 carta de Estrategia adicional.</li>
+                        <li>Ignorad las casillas de Reflexión.</li>
+                    </ul>
+                </div>
+                
+                <div class="variant-block">
+                    <h3>Modo Formación</h3>
+                    <p>Ideal para entornos de desarrollo profesional:</p>
+                    <ul>
+                        <li>Después de cada casilla de Reflexión, dedicad 5 minutos a discutir cómo las situaciones del juego se relacionan con vuestro entorno laboral real.</li>
+                        <li>Al final de la partida, cada jugador comparte un aprendizaje clave que puede aplicar en su trabajo diario.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card-interface-element bottom-left"></div>
+            <div class="card-interface-element bottom-right"></div>
+        </section>
+
+        <section class="section hologram">
+            <h2 class="data-glitch" data-text="APLICACIÓN AL ENTORNO PROFESIONAL">APLICACIÓN AL ENTORNO PROFESIONAL</h2>
+            
+            <p>Strategic Heroes ha sido diseñado no solo como un juego de entretenimiento, sino como una herramienta de desarrollo de habilidades profesionales. Cada partida ofrece oportunidades para practicar y reflexionar sobre competencias clave en el entorno laboral:</p>
+            
+            <div class="skills-container">
+                <div class="skill-block">
+                    <h3>Liderazgo Compartido</h3>
+                    <p>El juego fomenta un modelo de liderazgo distribuido, donde cada miembro del equipo aporta sus fortalezas únicas. Observa cómo emergen diferentes estilos de liderazgo durante la partida y cómo se complementan entre sí.</p>
+                </div>
+                
+                <div class="skill-block">
+                    <h3>Comunicación Efectiva</h3>
+                    <p>La necesidad de coordinar estrategias y compartir información crítica desarrolla habilidades de comunicación clara y concisa bajo presión, fundamentales en cualquier entorno profesional.</p>
+                </div>
+                
+                <div class="skill-block">
+                    <h3>Toma de Decisiones</h3>
+                    <p>Cada turno requiere evaluar riesgos, priorizar objetivos y tomar decisiones con información limitada, simulando los desafíos reales de la gestión empresarial.</p>
+                </div>
+                
+                <div class="skill-block">
+                    <h3>Gestión de Recursos</h3>
+                    <p>Los puntos de energía y las cartas de Estrategia representan recursos limitados que deben administrarse eficientemente, tal como ocurre con el tiempo, el presupuesto o el personal en proyectos reales.</p>
+                </div>
+                
+                <div class="skill-block">
+                    <h3>Adaptabilidad</h3>
+                    <p>Los eventos inesperados y los desastres ponen a prueba la capacidad del equipo para adaptarse rápidamente a circunstancias cambiantes, una habilidad esencial en el dinámico entorno empresarial actual.</p>
+                </div>
+                
+                <div class="skill-block">
+                    <h3>Pensamiento Estratégico</h3>
+                    <p>El juego requiere planificación a corto y largo plazo, anticipación de obstáculos y desarrollo de estrategias alternativas, competencias clave para roles directivos.</p>
+                </div>
+            </div>
+            
+            <p>Para maximizar el valor formativo de Strategic Heroes, recomendamos dedicar tiempo después de cada partida para reflexionar sobre estas competencias y cómo se han manifestado durante el juego. Las cartas de Reflexión están específicamente diseñadas para facilitar estas conversaciones.</p>
+        </section>
+
+        <div class="navigation blur-layer">
+            <a href="index.html" class="button glow-effect">Inicio</a>
+            <a href="tablero.html" class="button glow-effect">Tablero de Juego</a>
+            <a href="componentes.html" class="button glow-effect">Componentes</a>
+            <a href="dados.html" class="button glow-effect">Dados</a>
+            <button onclick="printManual()" class="button glow-effect">Imprimir Manual</button>
+        </div>
+        
+        <div class="loading-bar"></div>
+        
+        <div class="terminal-text">
+            > Cargando manual de Strategic Heroes...
+            > Manual listo para consulta.
+            > Esperando instrucciones del usuario.
+        </div>
+    </div>
+    
+    <div class="scroll-indicator" id="scrollTop"></div>
+    
+    <script src="js/print-functions.js"></script>
+    <script>
+        // Crear efecto de partículas
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Posición aleatoria
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.top = Math.random() * 100 + 'vh';
+                
+                // Tamaño aleatorio
+                const size = Math.random() * 3 + 1;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Duración aleatoria
+                const duration = Math.random() * 30 + 10;
+                particle.style.animation = `float ${duration}s infinite linear`;
+                
+                // Retraso aleatorio
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Efecto de glitch para títulos
+        function addGlitchEffect() {
+            const titles = document.querySelectorAll('h1, h2');
+            
+            titles.forEach(title => {
+                if (!title.dataset.text) {
+                    title.dataset.text = title.textContent;
+                }
+            });
+        }
+        
+        // Scroll suave
+        document.getElementById('scrollTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Inicializar efectos
+        window.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            addGlitchEffect();
+            
+            // Mostrar/ocultar botón de scroll
+            window.addEventListener('scroll', () => {
+                const scrollBtn = document.getElementById('scrollTop');
+                if (window.scrollY > 300) {
+                    scrollBtn.style.opacity = '1';
+                } else {
+                    scrollBtn.style.opacity = '0';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

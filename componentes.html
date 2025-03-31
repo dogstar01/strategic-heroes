@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Heroes - Componentes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=Exo+2:wght@200;300;400;500;600;700&family=Syncopate:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cyberpunk-styles.css">
+    <link rel="stylesheet" href="css/cyberpunk-hero-cards.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/component-cards.css">
+    <link rel="stylesheet" href="css/print-styles.css" media="print">
+    <link rel="stylesheet" href="css/hero-modal.css">
+</head>
+<body class="custom-cursor">
+    <div class="grid-body-bg"></div>
+    <div class="particles" id="particles"></div>
+    
+    <header class="scan-line">
+        <div class="circuit-header-bg"></div>
+        <div class="container">
+            <h1 data-text="STRATEGIC HEROES">STRATEGIC HEROES</h1>
+            <p>Componentes del Juego</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section hologram">
+            <h2 class="data-glitch" data-text="COMPONENTES DE STRATEGIC HEROES">COMPONENTES DE STRATEGIC HEROES</h2>
+            
+            <p>A continuación se presentan todos los componentes necesarios para jugar a Strategic Heroes. Estos componentes están diseñados para ser impresos y recortados, permitiéndote disfrutar del juego completo con tu equipo.</p>
+            
+            <div class="navigation blur-layer">
+                <button onclick="openPDF('pdfs/heroes/Heroes SH.pdf')" class="print-button glow-effect">Imprimir Cartas de Héroe</button>
+                <button onclick="openPDF('pdfs/estrategias/Estrategias_SH.pdf')" class="print-button glow-effect">Imprimir Cartas de Estrategia</button>
+                <button onclick="openPDF('pdfs/obstaculos/Obstaculos_SH.pdf')" class="print-button glow-effect">Imprimir Cartas de Obstáculo</button>
+                <button onclick="openPDF('pdfs/enemigos/Enemigos_SH.pdf')" class="print-button glow-effect">Imprimir Cartas de Enemigos</button>
+                <button onclick="openPDF('pdfs/desastres/Desastres_SH.pdf')" class="print-button glow-effect">Imprimir Cartas de Desastre</button>
+                <button onclick="openPDF('pdfs/eventos/Eventos_SH.pdf')" class="print-button glow-effect">Imprimir Cartas de Evento</button>
+                <button onclick="openPDF('pdfs/reflexiones/Reflexiones_SH.pdf')" class="print-button glow-effect">Imprimir Cartas de Reflexión</button>
+                <button onclick="openPDF('pdfs/fichas/Fichas_SH.pdf')" class="print-button glow-effect">Imprimir Fichas de Héroe</button>
+                <button onclick="openPDF('pdfs/energia/Energias_SH.pdf')" class="print-button glow-effect">Imprimir Marcadores de Enegía</button>
+                <button onclick="openPDF('pdfs/tablero/Tablero_SH.pdf')" class="print-button glow-effect">Imprimir Tablero</button>
+                <button onclick="openPDF('pdfs/dados/Dados_SH.pdf')" class="print-button glow-effect">Imprimir Dados</button>
+            </div>
+        </section>
+        
+        <!-- Cartas de BlueHorizon -->
+        <section class="section ui-element">
+            <h2 id="heroes" class="glow-effect">Cartas de BlueHorizon</h2>
+            
+            <p>Estas cartas representan a los líderes legendarios de La Boca te Lía, cada uno con habilidades únicas relacionadas con su área de especialización en la lucha contra las corporaciones.</p>
+            
+            <p><strong>Cantidad:</strong> 8 cartas (una por cada BlueHorizon)</p>
+            
+            <div id="hero-cards" class="print-content cards-container">
+                <div class="hero-card hologram-card">
+                    <div class="scan-effect"></div>
+                    <div class="card-interface-element top-left"></div>
+                    <div class="card-interface-element top-right"></div>
+                    <div class="hero-card-header">
+                        <h3 class="hero-card-title">Comandante Principal</h3>
+                        <p class="hero-card-subtitle">Oráculo Supremo</p>
+                    </div>
+                    <div class="hero-card-body">
+                        <p>Líder visionario de los BlueJacket, capaz de anticipar los movimientos de las corporaciones.</p>
+                        <p><strong>Puntos de poder iniciales:</strong> 12</p>
+                        <div class="hero-card-ability">
+                            <p><strong>Habilidad especial:</strong> Redistribuye hasta 3 puntos de energía entre los miembros del equipo una vez por turno.</p>
+                            <p><strong>Ventaja:</strong> +2 en tiradas contra Desastres.</p>
+                        </div>
+                    </div>
+                    <div class="card-interface-element bottom-left"></div>
+                    <div class="card-interface-element bottom-right"></div>
+                </div>
+                
+                <div class="hero-card hologram-card">
+                    <div class="scan-effect"></div>
+                    <div class="card-interface-element top-left"></div>
+                    <div class="card-interface-element top-right"></div>
+                    <div class="hero-card-header">
+                        <h3 class="hero-card-title">Estratega Financiero</h3>
+                        <p class="hero-card-subtitle">Mente Cuántica</p>
+                    </div>
+                    <div class="hero-card-body">
+                        <p>Genio matemático que descifra los patrones económicos de las corporaciones.</p>
+                        <p><strong>Puntos de poder iniciales:</strong> 10</p>
+                        <div class="hero-card-ability">
+                            <p><strong>Habilidad especial:</strong> Puede repetir una tirada de dado una vez por ronda.</p>
+                            <p><strong>Ventaja:</strong> +2 en tiradas contra Obstáculos.</p>
+                        </div>
+                    </div>
+                    <div class="card-interface-element bottom-left"></div>
+                    <div class="card-interface-element bottom-right"></div>
+                </div>
+                
+                <div class="hero-card hologram-card">
+                    <div class="scan-effect"></div>
+                    <div class="card-interface-element top-left"></div>
+                    <div class="card-interface-element top-right"></div>
+                    <div class="hero-card-header">
+                        <h3 class="hero-card-title">Coordinador de Operaciones</h3>
+                        <p class="hero-card-subtitle">Tormenta Táctica</p>
+                    </div>
+                    <div class="hero-card-body">
+                        <p>Maestro de la logística y la coordinación de equipos en el campo de batalla.</p>
+                        <p><strong>Puntos de poder iniciales:</strong> 11</p>
+                        <div class="hero-card-ability">
+                            <p><strong>Habilidad especial:</strong> Puede mover a otro héroe hasta 2 casillas adicionales en su turno.</p>
+                            <p><strong>Ventaja:</strong> +2 en tiradas contra Enemigos.</p>
+                        </div>
+                    </div>
+                    <div class="card-interface-element bottom-left"></div>
+                    <div class="card-interface-element bottom-right"></div>
+                </div>
+                
+                <div class="hero-card hologram-card">
+                    <div class="scan-effect"></div>
+                    <div class="card-interface-element top-left"></div>
+                    <div class="card-interface-element top-right"></div>
+                    <div class="hero-card-header">
+                        <h3 class="hero-card-title">Especialista en Infiltración</h3>
+                        <p class="hero-card-subtitle">Sombra Persuasiva</p>
+                    </div>
+                    <div class="hero-card-body">
+                        <p>Experto en penetrar las defensas corporativas y manipular la percepción.</p>
+                        <p><strong>Puntos de poder iniciales:</strong> 10</p>
+                        <div class="hero-card-ability">
+                            <p><strong>Habilidad especial:</strong> Puede convertir un Obstáculo en una casilla Normal una vez por partida.</p>
+                            <p><strong>Ventaja:</strong> +2 en tiradas de Eventos.</p>
+                        </div>
+                    </div>
+                    <div class="card-interface-element bottom-left"></div>
+                    <div class="card-interface-element bottom-right"></div>
+                </div>
+                
+                <div class="hero-card hologram-card">
+                    <div class="scan-effect"></div>
+                    <div class="card-interface-element top-left"></div>
+                    <div class="card-interface-element top-right"></div>
+                    <div class="hero-card-header">
+                        <h3 class="hero-card-title">Ingeniero Tecnológico</h3>
+                        <p class="hero-card-subtitle">Nexo Digital</p>
+                    </div>
+                    <div class="hero-card-body">
+                        <p>Genio de la tecnología capaz de hackear los sistemas más seguros.</p>
+                        <p><strong>Puntos de poder iniciales:</strong> 11</p>
+                        <div class="hero-card-ability">
+                            <p><strong>Habilidad especial:</strong> Puede ignorar un Desastre una vez por partida.</p>
+                            <p><strong>Ventaja:</strong> +2 en tiradas de Desastres.</p>
+                        </div>
+                    </div>
+                    <div class="card-interface-element bottom-left"></div>
+                    <div class="card-interface-element bottom-right"></div>
+                </div>
+                
+                <div class="hero-card hologram-card">
+                    <div class="scan-effect"></div>
+                    <div class="card-interface-element top-left"></div>
+                    <div class="card-interface-element top-right"></div>
+                    <div class="hero-card-header">
+                        <h3 class="hero-card-title">Oficial de Reclutamiento</h3>
+                        <p class="hero-card-subtitle">Espíritu Inquebrantable</p>
+                    </div>
+                    <div class="hero-card-body">
+                        <p>Inspirador nato que mantiene alta la moral de los BlueJacket.</p>
+                        <p><strong>Puntos de poder iniciales:</strong> 10</p>
+                        <div class="hero-card-ability">
+                            <p><strong>Habilidad especial:</strong> Puede recuperar 1 punto de energía para todos los héroes una vez por partida.</p>
+                            <p><strong>Ventaja:</strong> +2 en tiradas de Obstaculos.</p>
+                        </div>
+                    </div>
+                    <div class="card-interface-element bottom-left"></div>
+                    <div class="card-interface-element bottom-right"></div>
+                </div>
+                
+                <div class="hero-card hologram-card">
+                    <div class="scan-effect"></div>
+                    <div class="card-interface-element top-left"></div>
+                    <div class="card-interface-element top-right"></div>
+                    <div class="hero-card-header">
+                        <h3 class="hero-card-title">Maestro de Recursos</h3>
+                        <p class="hero-card-subtitle">Vórtice Adquisitivo</p>
+                    </div>
+                    <div class="hero-card-body">
+                        <p>Experto en obtener y distribuir recursos críticos para la resistencia.</p>
+                        <p><strong>Puntos de poder iniciales:</strong> 10</p>
+                        <div class="hero-card-ability">
+                            <p><strong>Habilidad especial:</strong> Puede obtener una carta de Estrategia adicional una vez por partida.</p>
+                            <p><strong>Ventaja:</strong> +2 en tiradas de Enemigos.</p>
+                        </div>
+                    </div>
+                    <div class="card-interface-element bottom-left"></div>
+                    <div class="card-interface-element bottom-right"></div>
+                </div>
+                
+                <div class="hero-card hologram-card">
+                    <div class="scan-effect"></div>
+                    <div class="card-interface-element top-left"></div>
+                    <div class="card-interface-element top-right"></div>
+                    <div class="hero-card-header">
+                        <h3 class="hero-card-title">Supervisor de Integridad</h3>
+                        <p class="hero-card-subtitle">Guardián Implacable</p>
+                    </div>
+                    <div class="hero-card-body">
+                        <p>Protector incorruptible de los valores y principios de La Boca te Lía.</p>
+                        <p><strong>Puntos de poder iniciales:</strong> 11</p>
+                        <div class="hero-card-ability">
+                            <p><strong>Habilidad especial:</strong> Puede prevenir la pérdida de puntos de energía una vez por ronda.</p>
+                            <p><strong>Ventaja:</strong> +2 en tiradas de Evento.</p>
+                        </div>
+                    </div>
+                    <div class="card-interface-element bottom-left"></div>
+                    <div class="card-interface-element bottom-right"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cartas de Estrategia -->
+        <section class="section ui-element">
+            <h2 id="estrategias" class="glow-effect">Cartas de Estrategia</h2>
+            
+            <p>Estas cartas representan tácticas, tecnologías o recursos que los BlueHorizon pueden utilizar para obtener ventajas en su misión contra las corporaciones.</p>
+            
+            <p><strong>Cantidad:</strong> 20 cartas</p>
+            
+            <div id="strategy-cards" class="print-content cards-container">
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Infiltración Avanzada</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Técnicas de sigilo desarrolladas por los mejores agentes de La Boca te Lía.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Avanza 2 casillas adicionales en tu próximo turno.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Unidad Rebelde</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">La fuerza de la resistencia reside en su inquebrantable espíritu de equipo.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Todos los BlueHorizon recuperan 1 punto de energía.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Hackeo Cuántico</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Tecnología de vanguardia que permite manipular los sistemas de seguridad corporativos.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Anula el efecto de una casilla de Obstáculo o Enemigo.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Protocolo de Emergencia</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Procedimientos de contingencia para situaciones críticas.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Reduce a la mitad el daño de un Desastre (redondeando hacia abajo).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Visión Estratégica</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Capacidad para anticipar movimientos y planificar con precisión.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Mira las próximas 3 cartas de cualquier mazo y reordénalas como desees.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Refuerzos Tácticos</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Apoyo adicional de los miembros de La Boca te Lía.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Añade +3 a tu próxima tirada de dado.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Camuflaje Adaptativo</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Tecnología que permite mimetizarse con el entorno corporativo.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Evita el efecto de la próxima casilla en la que caigas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Comunicación Segura</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Canales de comunicación encriptados imposibles de interceptar.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Intercambia una carta con otro jugador.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Análisis Predictivo</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Algoritmos avanzados que calculan probabilidades de éxito.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Elige el resultado de tu próxima tirada de D6 en lugar de lanzar el dado.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Escudo Energético</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Barrera protectora que absorbe daño.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Evita la pérdida de hasta 3 puntos de energía.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Inspiración Líder</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Capacidad para motivar al equipo en momentos críticos.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Permite a otro jugador usar su habilidad especial una vez más este turno.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Sabotaje Interno</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Manipulación de los sistemas internos corporativos.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Reduce en 5 puntos la dificultad del próximo desafío.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Distracción Táctica</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Maniobras para desviar la atención de los sistemas de seguridad.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Mueve a un enemigo hasta 3 casillas en cualquier dirección.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Recalibración Cuántica</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Ajuste de los sistemas tecnológicos para optimizar rendimiento.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Recupera el uso de una habilidad especial ya utilizada.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Impulso Energético</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Inyección de energía para potenciar capacidades.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Gana 3 puntos de energía inmediatamente.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Sincronización Perfecta</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Coordinación milimétrica entre miembros del equipo.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Realiza una acción adicional en tu turno.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Contramedida Adaptativa</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Sistema defensivo que aprende y neutraliza amenazas.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Cancela el efecto de un Evento negativo.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Salto Cuántico</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Tecnología experimental de teletransporte.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Muévete inmediatamente a cualquier casilla del tablero.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Recuperación Avanzada</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Técnicas médicas de vanguardia desarrolladas por La Boca te Lía.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Un héroe recupera todos sus puntos de energía.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card strategy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Ataque Coordinado</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Estrategia de combate que maximiza la eficiencia del equipo.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Todos los héroes añaden +2 a sus tiradas de ataque durante 2 rondas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cartas de Obstáculo -->
+        <section class="section ui-element">
+            <h2 id="obstaculos" class="glow-effect">Cartas de Obstáculo</h2>
+            
+            <p>Estas cartas representan barreras de seguridad o sistemas de defensa corporativos que los BlueHorizon deben superar en su misión.</p>
+            
+            <p><strong>Cantidad:</strong> 12 cartas</p>
+            
+            <div id="obstacle-cards" class="print-content cards-container">
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Firewall Adaptativo</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Sistema de seguridad digital que evoluciona para bloquear intrusiones.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 12</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Escáner Biométrico</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Sistema de identificación avanzado que detecta intrusos.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 14</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Campo de Fuerza</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Barrera energética que impide el paso físico.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 16</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Puerta Blindada</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Acceso reforzado con aleaciones avanzadas.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 13</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Sistema de Alarma</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Red de sensores que detecta movimiento no autorizado.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 11</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Cámara de Gas</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Sistema defensivo que libera toxinas paralizantes.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 15</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Láser de Seguridad</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Red de rayos láser que activan alarmas al ser interrumpidos.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 14</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Cerradura Cuántica</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Sistema de cierre que utiliza principios de física cuántica.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 17</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Muro Electrificado</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Barrera física cargada con alto voltaje.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 13</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Zona Vigilada</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Área con múltiples cámaras y sensores de movimiento.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 12</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Trampa Mecánica</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Dispositivo oculto que se activa al ser pisado.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 11</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card obstacle-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Cortafuegos Neural</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Barrera digital que ataca directamente al sistema nervioso.</p>
+                        <p class="card-description">Para superar este obstáculo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 18</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cartas de Enemigo -->
+        <section class="section ui-element">
+            <h2 id="enemigos" class="glow-effect">Cartas de Enemigo</h2>
+            
+            <p>Estas cartas representan agentes corporativos o mercenarios que intentan detener a los BlueHorizon.</p>
+            
+            <p><strong>Cantidad:</strong> 12 cartas</p>
+            
+            <div id="enemy-cards" class="print-content cards-container">
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Guardia de Seguridad</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Personal básico de seguridad corporativa.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 10</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Agente Corporativo</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Operativo entrenado para proteger los intereses de la compañía.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 14</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Mercenario de Élite</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Soldado profesional contratado para misiones de alta prioridad.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 18</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Dron de Combate</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Unidad robótica autónoma equipada con armamento.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 13</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Hacker Corporativo</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Especialista en seguridad informática que contraataca digitalmente.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 15</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Ejecutivo Corrupto</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Alto cargo corporativo dispuesto a todo por mantener su posición.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 12</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Cyborg de Seguridad</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Humano mejorado tecnológicamente para tareas de protección.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 16</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Agente Encubierto</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Infiltrado que se hace pasar por aliado.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 14</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Perro Robótico</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Unidad canina mecánica con sensores avanzados.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 11</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Científico Armado</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Investigador corporativo que utiliza tecnología experimental como arma.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 13</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Francotirador Táctico</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Especialista en eliminación a distancia.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 17</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card enemy-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Comandante de Seguridad</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Líder de las fuerzas de defensa corporativas.</p>
+                        <p class="card-description">Para derrotar a este enemigo, debes obtener un resultado igual o superior a la dificultad en una tirada de dado.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 19</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cartas de Desastre -->
+        <section class="section ui-element">
+            <h2 id="desastres" class="glow-effect">Cartas de Desastre</h2>
+            
+            <p>Estas cartas representan contraataques masivos de las corporaciones que amenazan toda la misión.</p>
+            
+            <p><strong>Cantidad:</strong> 10 cartas</p>
+            
+            <div id="disaster-cards" class="print-content cards-container">
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Ataque de Drones</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Enjambre de drones de combate autónomos.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 2 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 15</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Bloqueo del Sistema</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Cierre total de los sistemas de acceso.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 2 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 17</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Protocolo Omega</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Activación del sistema de defensa letal.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 3 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 20</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Colapso Estructural</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Derrumbe parcial del edificio corporativo.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 2 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 16</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Gas Neurotóxico</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Liberación de agentes químicos en el sistema de ventilación.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 2 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 18</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Contraataque Masivo</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Movilización de todas las fuerzas de seguridad disponibles.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 3 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 19</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Virus Informático</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Infección que compromete los sistemas de La Boca te Lía.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 2 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 16</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Interferencia Electromagnética</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Pulso que desactiva temporalmente la tecnología.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 2 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 15</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Traición Interna</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Un miembro de La Boca te Lía revela información crítica.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 2 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 17</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card disaster-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Inteligencia Artificial Hostil</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Sistema de IA que toma el control de las defensas.</p>
+                        <p class="card-description">Todos los BlueHorizon deben superar esta dificultad o perder 3 puntos de energía.</p>
+                        <div class="card-difficulty">
+                            <p><strong>Dificultad: 19</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cartas de Evento -->
+        <section class="section ui-element">
+            <h2 id="eventos" class="glow-effect">Cartas de Evento</h2>
+            
+            <p>Estas cartas representan cambios inesperados en el campo de batalla que afectan a todos los BlueHorizon.</p>
+            
+            <p><strong>Cantidad:</strong> 10 cartas</p>
+            
+            <div id="event-cards" class="print-content cards-container">
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Apagón Energético</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Los sistemas de la corporación fallan temporalmente.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Todas las casillas de Obstáculo se convierten en casillas Normales durante 2 rondas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Alerta de Seguridad</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Se activan protocolos de seguridad adicionales.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> La dificultad de todos los desafíos aumenta en 2 puntos durante 3 rondas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Refuerzos Rebeldes</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Llegan nuevos miembros de La Boca te Lía.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Cada BlueHorizon recupera 2 puntos de energía.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Cambio de Turno</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Rotación del personal de seguridad corporativo.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Todas las casillas de Enemigo cambian su posición en el tablero.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Actualización de Sistema</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Las corporaciones mejoran sus defensas digitales.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> La dificultad de todos los Obstáculos aumenta en 3 puntos durante 2 rondas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Fallo en la Red</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Problemas en la infraestructura de comunicaciones.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Nadie puede usar cartas de Estrategia durante 1 ronda.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Información Privilegiada</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Datos internos filtrados por un aliado.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Cada jugador puede robar una carta de Estrategia adicional.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Tormenta Electromagnética</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Fenómeno natural que afecta a los sistemas electrónicos.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Todas las habilidades especiales quedan desactivadas durante 2 rondas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Evacuación de Emergencia</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Protocolo de seguridad que vacía temporalmente el edificio.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Todas las casillas de Enemigo se convierten en casillas Normales durante 1 ronda.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Inspiración Colectiva</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Momento de claridad y determinación compartida.</p>
+                        <div class="card-effect">
+                            <p><strong>Efecto:</strong> Todos los jugadores añaden +3 a sus tiradas durante 2 rondas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cartas de Reflexión -->
+        <section class="section ui-element">
+            <h2 id="reflexiones" class="glow-effect">Cartas de Reflexión</h2>
+            
+            <p>Estas cartas representan momentos en que los BlueHorizon pueden reagruparse y planificar su estrategia, conectando la experiencia del juego con situaciones reales de trabajo en equipo.</p>
+            
+            <p><strong>Cantidad:</strong> 10 cartas</p>
+            
+            <div id="reflection-cards" class="print-content cards-container">
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Liderazgo en Crisis</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Qué estrategias de liderazgo han sido más efectivas durante el juego? ¿Cómo se relacionan con situaciones reales en tu equipo de trabajo?</p>
+                    </div>
+                </div>
+                
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Comunicación Efectiva</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Cómo ha sido la comunicación entre los miembros del equipo? ¿Qué podría mejorarse en un entorno laboral real?</p>
+                    </div>
+                </div>
+                
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Gestión de Recursos</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Cómo habéis administrado los recursos limitados (puntos de energía, cartas de estrategia)? ¿Qué paralelismos existen con la gestión de recursos en proyectos reales?</p>
+                    </div>
+                </div>
+                
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Toma de Decisiones</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Cómo ha sido el proceso de toma de decisiones en el equipo? ¿Qué aprendizajes podéis aplicar en vuestro entorno profesional?</p>
+                    </div>
+                </div>
+                
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Adaptación al Cambio</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Cómo ha respondido el equipo ante los eventos inesperados? ¿Qué estrategias de adaptación han funcionado mejor?</p>
+                    </div>
+                </div>
+                
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Resolución de Conflictos</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Han surgido desacuerdos durante el juego? ¿Cómo se han resuelto? ¿Qué técnicas podrían aplicarse en situaciones laborales reales?</p>
+                    </div>
+                </div>
+                
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Planificación Estratégica</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Habéis planificado a corto o largo plazo? ¿Qué enfoque ha resultado más efectivo y por qué?</p>
+                    </div>
+                </div>
+                
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Gestión del Riesgo</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Cómo habéis evaluado y gestionado los riesgos durante el juego? ¿Qué paralelismos existen con la gestión de riesgos en proyectos reales?</p>
+                    </div>
+                </div>
+                
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Aprovechamiento de Fortalezas</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Cómo habéis aprovechado las habilidades únicas de cada BlueHorizon? ¿Cómo podéis aplicar este enfoque para aprovechar las fortalezas individuales en vuestro equipo real?</p>
+                    </div>
+                </div>
+                
+                <div class="component-card reflection-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Evaluación del Desempeño</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">¿Qué ha funcionado bien y qué podría mejorarse en vuestra estrategia como equipo? ¿Cómo podéis aplicar estas lecciones en vuestro entorno profesional?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Fichas de Héroe -->
+        <section class="section ui-element">
+            <h2 id="fichas" class="glow-effect">Fichas de Héroe</h2>
+            
+            <p>Estas fichas representan a cada BlueHorizon en el tablero. Cada ficha tiene un color distintivo y el símbolo o nombre del héroe correspondiente.</p>
+            
+            <p><strong>Cantidad:</strong> 8 fichas</p>
+            
+            <div id="hero-tokens" class="print-content tokens-container">
+                <div class="token hero-token">OS</div>
+                <div class="token hero-token">MC</div>
+                <div class="token hero-token">TT</div>
+                <div class="token hero-token">SP</div>
+                <div class="token hero-token">ND</div>
+                <div class="token hero-token">EI</div>
+                <div class="token hero-token">VA</div>
+                <div class="token hero-token">GI</div>
+            </div>
+        </section>
+        
+        <!-- Marcadores de Energía -->
+        <section class="section ui-element">
+            <h2 id="energia" class="glow-effect">Marcadores de Energía</h2>
+            
+            <p>Se utilizan para llevar el control de los puntos de energía de cada BlueHorizon. Son fichas numeradas del 1 al 12.</p>
+            
+            <p><strong>Cantidad:</strong> 16 marcadores</p>
+            
+            <div id="energy-tokens" class="print-content tokens-container">
+                <div class="token energy-token">1</div>
+                <div class="token energy-token">2</div>
+                <div class="token energy-token">3</div>
+                <div class="token energy-token">4</div>
+                <div class="token energy-token">5</div>
+                <div class="token energy-token">6</div>
+                <div class="token energy-token">7</div>
+                <div class="token energy-token">8</div>
+                <div class="token energy-token">9</div>
+                <div class="token energy-token">10</div>
+                <div class="token energy-token">11</div>
+                <div class="token energy-token">12</div>
+                <div class="token energy-token">1</div>
+                <div class="token energy-token">2</div>
+                <div class="token energy-token">3</div>
+                <div class="token energy-token">4</div>
+            </div>
+        </section>
+        
+        <div class="navigation blur-layer">
+            <a href="index.html" class="button glow-effect">Inicio</a>
+            <a href="tablero.html" class="button glow-effect">Tablero de Juego</a>
+            <a href="dados.html" class="button glow-effect">Dados</a>
+        </div>
+        
+        <div class="loading-bar"></div>
+        
+        <div class="terminal-text">
+            > Cargando componentes de Strategic Heroes...
+            > Componentes listos para impresión.
+            > Esperando selección del usuario.
+        </div>
+    </div>
+    
+    <div class="scroll-indicator" id="scrollTop"></div>
+    
+    <script src="js/print-functions.js"></script>
+    <script>
+        // Crear efecto de partículas
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Posición aleatoria
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.top = Math.random() * 100 + 'vh';
+                
+                // Tamaño aleatorio
+                const size = Math.random() * 3 + 1;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Duración aleatoria
+                const duration = Math.random() * 30 + 10;
+                particle.style.animation = `float ${duration}s infinite linear`;
+                
+                // Retraso aleatorio
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Efecto de glitch para títulos
+        function addGlitchEffect() {
+            const titles = document.querySelectorAll('h1, h2');
+            
+            titles.forEach(title => {
+                if (!title.dataset.text) {
+                    title.dataset.text = title.textContent;
+                }
+            });
+        }
+        
+        // Scroll suave
+        document.getElementById('scrollTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Inicializar efectos
+        window.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            addGlitchEffect();
+            
+            // Mostrar/ocultar botón de scroll
+            window.addEventListener('scroll', () => {
+                const scrollBtn = document.getElementById('scrollTop');
+                if (window.scrollY > 300) {
+                    scrollBtn.style.opacity = '1';
+                } else {
+                    scrollBtn.style.opacity = '0';
+                }
+            });
+        });
+    </script>
+    <script src="js/hero-viewer.js"></script>
+    <script src="js/pdf-viewer.js"></script>
+</body>
+</html>
